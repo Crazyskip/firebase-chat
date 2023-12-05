@@ -1,0 +1,58 @@
+.chat-container {
+  padding: 10px 10px;
+  background-color: #323232;
+  min-height: 512px;
+  max-height: 512px;
+  max-width: 820px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  overflow-y: scroll;
+}
+
+.chat-input {
+  width: 80%;
+  max-width: 360px;
+  margin: 0 5px;
+  padding: 3px 5px;
+  font-size: 1.15rem;
+}
+
+.chat-button {
+  font-size: 1.15rem;
+  padding: 3px 15px;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.profile-pic {
+  margin: 0 8px;
+}
+
+.sent {
+  margin-left: auto;
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.received {
+  margin-right: auto;
+  flex-direction: row;
+  text-align: left;
+}
+
+.message-content {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 8px;
+}
+
+.username {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.5);
+}

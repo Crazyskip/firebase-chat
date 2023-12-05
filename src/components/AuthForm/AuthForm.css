@@ -1,0 +1,28 @@
+.auth-forms {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  border: solid 1px #fff;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 16px 0;
+  width: 100%;
+  max-width: 360px;
+}
+
+.signin-title {
+  margin: 0 0 5px 0;
+  font-size: 1.5rem;
+}
+
+.signin-input {
+  margin: 3px 0;
+  font-size: 1rem;
+  padding: 2px 5px;
+}
