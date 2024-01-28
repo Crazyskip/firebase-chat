@@ -3,13 +3,23 @@ import "./AuthForm.css";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  getAuth,
+  signInWithPopup,
 } from "firebase/auth";
 
 function AuthForm({ auth, setUser }) {
+  const provider = new GoogleAuthProvider();
+
   const signInEmailRef = useRef();
   const signInPasswordRef = useRef();
   const signUpEmailRef = useRef();
   const signUpPasswordRef = useRef();
+
+  function googleSignIn() {
+    const auth = getAuth();
+    signInWithPopup(auth, provider);
+  }
 
   function signIn(event) {
     event.preventDefault();
@@ -60,6 +70,9 @@ function AuthForm({ auth, setUser }) {
           ref={signInPasswordRef}
         />
         <input type="submit" value="Login" />
+        <button className="google-sign" onClick={googleSignIn}>
+          <img src="/dark_google_signin.png" alt="google sign in" height={48} />
+        </button>
       </form>
       <form className="signin-form" onSubmit={signUp}>
         <h2 className="signin-title">Signup</h2>
@@ -78,6 +91,9 @@ function AuthForm({ auth, setUser }) {
           ref={signUpPasswordRef}
         />
         <input type="submit" value="Sign up" />
+        <button className="google-sign" onClick={googleSignIn}>
+          <img src="/dark_google_signup.png" alt="google sign up" height={48} />
+        </button>
       </form>
     </div>
   );
